@@ -1,0 +1,77 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mercedes img{
+width: 20vw;
+height: 50vh;
+position: absolute;
+left: 200px;
+top: 200px;
+}
+
+.bmw img{
+    width: 20vw;
+height: 50vh;
+position: absolute;
+left: 700px;
+top: 200px;
+}
+.bentley img{
+    width: 20vw;
+height: 50vh;
+position: absolute;
+left: 1200px;
+top: 200px;
+}
+.yazi{
+    position: absolute;
+    left: 200px;
+    top: 680px;
+}
+.yaziIki{
+   position: absolute;
+   left: 700px;
+   top: 680px;
+}
+.yaziUc{
+    position: absolute;
+    left: 1200px;
+    top: 680px;
+}
+h1{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+button{
+    position: absolute;
+    left: 95vw;
+    background-color: yellow;
+    border: none;
+    height:50px  ;
+}
+.div *{
+    display: block;
+    margin: 10px;
+}
+.div{
+    display: none;
+    background-color: aqua;
+    width: fit-content;
+    float: right;
+    height: 300px;
+}
+.stop{
+    display: none;
+    position: absolute;
+    left: 84vw;
+}
+.div button{
+    background-color: blue;
+    color: white;
+    width: 50px;
+
+}
