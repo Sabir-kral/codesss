@@ -1,77 +1,32 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.mercedes img{
-width: 20vw;
-height: 50vh;
-position: absolute;
-left: 200px;
-top: 200px;
-}
-
-.bmw img{
-    width: 20vw;
-height: 50vh;
-position: absolute;
-left: 700px;
-top: 200px;
-}
-.bentley img{
-    width: 20vw;
-height: 50vh;
-position: absolute;
-left: 1200px;
-top: 200px;
-}
-.yazi{
-    position: absolute;
-    left: 200px;
-    top: 680px;
-}
-.yaziIki{
-   position: absolute;
-   left: 700px;
-   top: 680px;
-}
-.yaziUc{
-    position: absolute;
-    left: 1200px;
-    top: 680px;
-}
-h1{
-    position: absolute;
-    left: 100px;
-    top: 100px;
-}
-button{
-    position: absolute;
-    left: 95vw;
-    background-color: yellow;
-    border: none;
-    height:50px  ;
-}
-.div *{
+input,button{
     display: block;
-    margin: 10px;
+    margin: 25px auto;
 }
-.div{
-    display: none;
+form{
+    width: 25vw;
     background-color: aqua;
-    width: fit-content;
-    float: right;
-    height: 300px;
+position: absolute;
+top: 50px;
+right: 0;
 }
-.stop{
-    display: none;
-    position: absolute;
-    left: 84vw;
+#add{
+position: absolute;
+top: 0;
+right: 0;
 }
-.div button{
-    background-color: blue;
-    color: white;
-    width: 50px;
-
+.container{
+    width: 75vw;
+    padding: 20px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.item{
+    width: 25%;
+    border-radius: 15px;
 }

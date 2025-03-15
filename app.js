@@ -1,52 +1,53 @@
+$(document).ready(function () {
+    $("#add").click(
+        function () {
+            $("form").toggle(2000)
+        }
+    )
+})
+let cars = JSON.parse(localStorage.getItem("cars"))||[]
+let form  = document.querySelector("form")
+let container = document.querySelector(".container")
+form.addEventListener("submit",(event)=>{
+    event.preventDefault()
+    let inputs = document.querySelectorAll("input")
+    let car = {
+        marka:inputs[0].value,
+        model:inputs[1].value,
+        year:inputs[2].value,
+        price:inputs[3].value,
+        color:inputs[4].value,
+        image:inputs[5].value
+    }
+    cars.push(car)
+localStorage.setItem("cars",JSON.stringify(cars))
+form.reset()
+container.innerHTML = ""
+carItem()
+})
 
-let arr = []
-let objekt = {
-    marka:"mercedes",
-    model:"GLC 4Matic",
-    il:2022,
-    reng:"qara"
-}
-arr.push(objekt)
-let objekt2 = {
-    marka:"BMW",
-    model:"M6",
-    il:2020,
-    reng:"qara"
-}
-arr.push(objekt2)
-let objekt3 = {
-    marka:"bentley",
-    model:"bentayqa",
-    il:2023,        
-    reng:"qara"
-}
-arr.push(objekt3)
-localStorage.setItem("cars",JSON.stringify(arr))
-let buton = document.querySelector(".button")
-let stop = document.querySelector(".stop")
-function show() {
-        $(".div").show(1000)
-        $(".button").hide(1000)
-        $(".stop").show(1000)
-}
-buton.addEventListener("click",show)
 
-function hide() {
-    $(".div").hide(1000)
-    $(".button").show(1000)
-    $(".stop").hide(1000)
+
+
+function carItem() {
+    cars.forEach(element => {
+        
+        let div =document.createElement("div")
+        div.classList.add("item")
+        let img = document.createElement("img")
+        img.src = element.image
+        let h4 = document.createElement("h4")
+        h4.innerText = element.price
+        let p1 = document.createElement("p")
+        p1.innerText = element.marka
+        let p2 = document.createElement("p")
+        p2.innerText = element.model
+        let p3 = document.createElement("p")
+        p3.innerText = element.color
+div.append(img,h4,p1,p2,p3)
+container.append(div)
+    });
+
+
 }
-stop.addEventListener("dblclick",hide)
-let inputs = document.querySelectorAll("input")
-let form = document.querySelector("form")
-inputs.forEach(element => {
-    form.addEventListener("submit",function () {
-        event.preventDefault()
-        let div = document.createElement("div")
-        let body = document.querySelector("body")
-        div.style.backgroundColor = "red"
-        div.style.width = "100px"
-            
-        body.append(div)
-    })
-});
+carItem()
